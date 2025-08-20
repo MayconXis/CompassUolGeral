@@ -1,0 +1,26 @@
+Boa tarde pessoal, vou falar um pouco da minha Heurística que para identificar alguns problemas do sistema, eu utilizei a abordagem de testes exploratórios guiados pela heurística CHIQUE, que considera pontos essenciais como Campos obrigatórios Habilitar/Desabilitar formulários, Interrupção da ação, Quebra de fluxos, Usabilidade dos menus, Estouro de campos.
+Primeiro, criei um mapa mental com as principais telas do BugBank:
+Login, Cadastro, Dashboard , Transferência.
+Listei o que cada uma faz, os campos e os possíveis caminhos que um usuário pode seguir.
+Depois, montei outro mapa com testes funcionais e exploratórios, baseados no CHIQUE.
+Organizei como:
+Validação de campos obrigatórios, Erros na transferência, Mensagens de sistema,Quebra de fluxo, Usabilidade dos menus.
+E perguntas como
+Está claro o que deve fazer nessa tela?
+O sistema me dá retorno depois de uma ação?
+Está tudo funcionando da mesma forma em diferentes partes?
+
+Depois de montar o mapa mental com as ideias principais e fazer uma análise com base no CHIQUE, fui para os testes no BugBank.
+
+🔹 No Bug 1, apliquei o critério de Estouro de Campos para testar limites do sistema . Ao criar uma conta no modo mobile, o quadrado de confirmação de sucesso com outra parte do site sobrepõe incorretamente a interface. Mesmo com o fundo escurecido, parte da tela inferior continua visível e não segue o padrão de opacidade.
+
+🔹 No Bug 2, avaliei a usabilidade dos menus e elementos visuais em dispositivos móveis. No modo mobile (ou quando a tela é reduzida), a interface exibe uma seta de voltar. Porém, quando clica diretamente na seta, não acontece nada. A ação de voltar só funciona ao clicar sobre o nome do lado da seta, o que não é intuitivo e pode confundir o usuário.
+
+🔹 No Bug 3, testei a entrada de dados nos campos obrigatórios, incluindo diferentes caracteres especiais. O sistema aceita alguns, mas bloqueia outros sem explicar o motivo, por exemplo:O sistema aceita caracteres especiais (como %, !), mas recusa outros como (ponto final. virgulas, )parenteses) , o que prejudica a experiência do usuário e revela falhas na qualidade das validações.
+
+🔹 Os Bugs 4 e 5 estão relacionados à quebra de fluxos e interrupções de ações, No 4, quando o usuário tenta transferir saldo para si mesmo, o sistema exibe um erro (que é o comportamento esperado), mas redireciona automaticamente para a tela de saldo sem nenhuma explicação visível, o que pode confundir o usuário, diferente do 5.
+
+🔹 No Bug 5, Ao realizar uma transferência para uma conta que realmente existe, o sistema exibe um feedback positivo de que a transação foi bem-sucedida. Mas, ele não redireciona o usuário para a tela de saldo, como acontece quando a transferência falha no bug 4.
+Além disso, o formulário de transferência permanece preenchido, e é possível repetir a transação apenas clicando novamente no botão, sem necessidade de inserir os dados novamente ou ver o novo saldo, o que pode causar confusão, pois o comportamento após uma transferência bem-sucedida é diferente do de uma mal-sucedida.
+
+🔹 Já o Bug 6 envolve estouro de campos e falhas de usabilidade, quando o campo "valor da transferência" está vazio ou caracteres invalidos, aparece um erro extenso com conteúdo interno técnico, mas nem sempre aparece, deixando o usuário confuso.

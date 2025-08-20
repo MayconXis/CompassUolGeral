@@ -1,0 +1,674 @@
+{
+	"id": "908333bd-f9e7-4044-bef2-3676240976ef",
+	"name": "ServeRest API-Testes",
+	"timestamp": "2025-08-15T19:03:21.017Z",
+	"collection_id": "47360961-575e2e08-d764-4de6-9f19-e1223d3e3378",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 26,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-08-15T19:03:09.503Z",
+	"totalFail": 14,
+	"results": [
+		{
+			"id": "1387ebfd-51cd-4bf7-86c1-8d75db9c199b",
+			"name": "[POST] /login",
+			"url": "https://compassuol.serverest.dev/login",
+			"time": 189,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Verifica a mensagem de sucesso": true,
+				"Verifica se o token foi retornado": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Verifica a mensagem de sucesso": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Verifica se o token foi retornado": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				197,
+				189
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Verifica a mensagem de sucesso": true,
+					"Verifica se o token foi retornado": true
+				},
+				{
+					"Status code is 200": true,
+					"Verifica a mensagem de sucesso": true,
+					"Verifica se o token foi retornado": true
+				}
+			]
+		},
+		{
+			"id": "d0177c83-c105-4f2f-ac48-4a893e448872",
+			"name": "[POST]/login invalido",
+			"url": "https://compassuol.serverest.dev/login",
+			"time": 188,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401": true,
+				"Verifica a mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Verifica a mensagem de erro": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				215,
+				188
+			],
+			"allTests": [
+				{
+					"Status code is 401": true,
+					"Verifica a mensagem de erro": true
+				},
+				{
+					"Status code is 401": true,
+					"Verifica a mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "4e9898bd-496e-49be-bace-862acea21878",
+			"name": "[GET] /usuarios",
+			"url": "https://compassuol.serverest.dev/usuarios",
+			"time": 208,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				233,
+				208
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "029d8024-b346-40c3-b732-4133aa51c379",
+			"name": "[GET]/usuarios/{_id}",
+			"url": "https://compassuol.serverest.dev/usuarios/5J00y9rs29pnVWf5",
+			"time": 192,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				172,
+				192
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "7a13104b-b2d8-4f05-ba2e-7e481fc27bbe",
+			"name": "[POST] /usuarios",
+			"url": "https://compassuol.serverest.dev/usuarios",
+			"time": 175,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 201": false,
+				"Verifica a mensagem de sucesso": false,
+				"Verifica se o ID do usuário foi retornado": false
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 0,
+					"fail": 2
+				},
+				"Verifica a mensagem de sucesso": {
+					"pass": 0,
+					"fail": 2
+				},
+				"Verifica se o ID do usuário foi retornado": {
+					"pass": 0,
+					"fail": 2
+				}
+			},
+			"times": [
+				191,
+				175
+			],
+			"allTests": [
+				{
+					"Status code is 201": false,
+					"Verifica a mensagem de sucesso": false,
+					"Verifica se o ID do usuário foi retornado": false
+				},
+				{
+					"Status code is 201": false,
+					"Verifica a mensagem de sucesso": false,
+					"Verifica se o ID do usuário foi retornado": false
+				}
+			]
+		},
+		{
+			"id": "f405e4cf-ef4f-4c45-a179-4cb4a37f3a31",
+			"name": "[POST]/ usuarios invalido",
+			"url": "https://compassuol.serverest.dev/usuarios",
+			"time": 170,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Verifica a mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Verifica a mensagem de erro": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				191,
+				170
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Verifica a mensagem de erro": true
+				},
+				{
+					"Status code is 400": true,
+					"Verifica a mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "e9791458-f1c7-4871-89a9-797838f7480f",
+			"name": "[POST]/usuarios email existente",
+			"url": "https://compassuol.serverest.dev/usuarios",
+			"time": 191,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Verifica a mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Verifica a mensagem de erro": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				169,
+				191
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Verifica a mensagem de erro": true
+				},
+				{
+					"Status code is 400": true,
+					"Verifica a mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "c3976048-e6cc-4706-8398-c48093ed96cb",
+			"name": "[DELETE] /usuarios/{_id}",
+			"url": "https://compassuol.serverest.dev/usuarios/5J00y9rs29pnVWf5",
+			"time": 185,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Verifica a mensagem de sucesso": false,
+				"Verifica a mensagem de que nenhum registro foi excluído": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Verifica a mensagem de sucesso": {
+					"pass": 0,
+					"fail": 2
+				},
+				"Verifica a mensagem de que nenhum registro foi excluído": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				187,
+				185
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Verifica a mensagem de sucesso": false,
+					"Verifica a mensagem de que nenhum registro foi excluído": true
+				},
+				{
+					"Status code is 200": true,
+					"Verifica a mensagem de sucesso": false,
+					"Verifica a mensagem de que nenhum registro foi excluído": true
+				}
+			]
+		},
+		{
+			"id": "bfdf2d61-1a30-4129-a4d5-649a16b2990a",
+			"name": "[PUT] /usuarios/{_id}",
+			"url": "https://compassuol.serverest.dev/usuarios/5J00y9rs29pnVWf5",
+			"time": 170,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				189,
+				170
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "d44b7c47-157a-4b3b-9613-453fec770635",
+			"name": "[GET] /produtos",
+			"url": "https://compassuol.serverest.dev/produtos",
+			"time": 172,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				193,
+				172
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "710c53d3-f76c-4524-b6b5-e5f768c0e08e",
+			"name": "[GET] /produtos/{_id}",
+			"url": "https://compassuol.serverest.dev/produtos/5J00y9rs29pnVWf5",
+			"time": 187,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				172,
+				187
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "e41f2383-cc99-418c-a6ef-d157afa4dcbc",
+			"name": "[POST] /produtos",
+			"url": "https://compassuol.serverest.dev/produtos",
+			"time": 571,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 201": false,
+				"Verifica a mensagem de sucesso": false,
+				"Verifica se o ID do produto foi retornado": false
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 0,
+					"fail": 2
+				},
+				"Verifica a mensagem de sucesso": {
+					"pass": 0,
+					"fail": 2
+				},
+				"Verifica se o ID do produto foi retornado": {
+					"pass": 0,
+					"fail": 2
+				}
+			},
+			"times": [
+				186,
+				571
+			],
+			"allTests": [
+				{
+					"Status code is 201": false,
+					"Verifica a mensagem de sucesso": false,
+					"Verifica se o ID do produto foi retornado": false
+				},
+				{
+					"Status code is 201": false,
+					"Verifica a mensagem de sucesso": false,
+					"Verifica se o ID do produto foi retornado": false
+				}
+			]
+		},
+		{
+			"id": "aa2140da-6b22-4bdf-a965-9dbc0ab87a1e",
+			"name": "[POST]/produtos sem token",
+			"url": "https://compassuol.serverest.dev/produtos",
+			"time": 173,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401": true,
+				"Verifica a mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Verifica a mensagem de erro": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				189,
+				173
+			],
+			"allTests": [
+				{
+					"Status code is 401": true,
+					"Verifica a mensagem de erro": true
+				},
+				{
+					"Status code is 401": true,
+					"Verifica a mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "d4372bc7-6687-4f31-87cc-8c400f57f2e3",
+			"name": "[GET] /produtos/{_id}",
+			"url": "https://compassuol.serverest.dev/produtos/5J00y9rs29pnVWf5",
+			"time": 186,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				190,
+				186
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "97ef4a6a-9d56-43e2-8da3-655e90c6901d",
+			"name": "[PUT] /produtos/{_id}",
+			"url": "https://compassuol.serverest.dev/produtos/5J00y9rs29pnVWf5",
+			"time": 190,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				194,
+				190
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "5680fd7d-8210-40bd-aa02-5ad8be486b4a",
+			"name": "[GET] /carrinhos",
+			"url": "https://compassuol.serverest.dev/carrinhos",
+			"time": 188,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				189,
+				188
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "d3511700-304d-4e78-8535-34458699d49d",
+			"name": "[GET] /carrinhos/{_id}",
+			"url": "https://compassuol.serverest.dev/carrinhos/5J00y9rs29pnVWf5",
+			"time": 184,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				174,
+				184
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "00a53600-fe34-4f6c-976d-0ce1eab61b09",
+			"name": "[POST] /carrinhos",
+			"url": "https://compassuol.serverest.dev/carrinhos",
+			"time": 190,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				169,
+				190
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "0ef90e52-7efc-4649-9044-43806c85478d",
+			"name": "[DELETE] /carrinhos/concluir-compra",
+			"url": "https://compassuol.serverest.dev/carrinhos/concluir-compra",
+			"time": 186,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				169,
+				186
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "1ac14b95-e794-4dfb-8488-ee5a72db8321",
+			"name": "[DELETE] /carrinhos/cancelar-compra",
+			"url": "https://compassuol.serverest.dev/carrinhos/cancelar-compra",
+			"time": 188,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				187,
+				188
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		}
+	],
+	"count": 2,
+	"totalTime": 7839,
+	"collection": {
+		"requests": [
+			{
+				"id": "1387ebfd-51cd-4bf7-86c1-8d75db9c199b",
+				"method": "POST"
+			},
+			{
+				"id": "d0177c83-c105-4f2f-ac48-4a893e448872",
+				"method": "POST"
+			},
+			{
+				"id": "4e9898bd-496e-49be-bace-862acea21878",
+				"method": "GET"
+			},
+			{
+				"id": "029d8024-b346-40c3-b732-4133aa51c379",
+				"method": "GET"
+			},
+			{
+				"id": "7a13104b-b2d8-4f05-ba2e-7e481fc27bbe",
+				"method": "POST"
+			},
+			{
+				"id": "f405e4cf-ef4f-4c45-a179-4cb4a37f3a31",
+				"method": "POST"
+			},
+			{
+				"id": "e9791458-f1c7-4871-89a9-797838f7480f",
+				"method": "POST"
+			},
+			{
+				"id": "c3976048-e6cc-4706-8398-c48093ed96cb",
+				"method": "DELETE"
+			},
+			{
+				"id": "bfdf2d61-1a30-4129-a4d5-649a16b2990a",
+				"method": "PUT"
+			},
+			{
+				"id": "d44b7c47-157a-4b3b-9613-453fec770635",
+				"method": "GET"
+			},
+			{
+				"id": "710c53d3-f76c-4524-b6b5-e5f768c0e08e",
+				"method": "GET"
+			},
+			{
+				"id": "e41f2383-cc99-418c-a6ef-d157afa4dcbc",
+				"method": "POST"
+			},
+			{
+				"id": "aa2140da-6b22-4bdf-a965-9dbc0ab87a1e",
+				"method": "POST"
+			},
+			{
+				"id": "d4372bc7-6687-4f31-87cc-8c400f57f2e3",
+				"method": "DELETE"
+			},
+			{
+				"id": "97ef4a6a-9d56-43e2-8da3-655e90c6901d",
+				"method": "PUT"
+			},
+			{
+				"id": "5680fd7d-8210-40bd-aa02-5ad8be486b4a",
+				"method": "GET"
+			},
+			{
+				"id": "d3511700-304d-4e78-8535-34458699d49d",
+				"method": "GET"
+			},
+			{
+				"id": "00a53600-fe34-4f6c-976d-0ce1eab61b09",
+				"method": "POST"
+			},
+			{
+				"id": "0ef90e52-7efc-4649-9044-43806c85478d",
+				"method": "DELETE"
+			},
+			{
+				"id": "1ac14b95-e794-4dfb-8488-ee5a72db8321",
+				"method": "DELETE"
+			}
+		]
+	}
+}
