@@ -1,0 +1,5 @@
+User Story: Calculadora Simples
+função: Adicionar dois números.
+
+Descrição:
+Como um usuário, eu quero poder inserir dois números e uma operação de adição (+) para que a calculadora exiba a soma correta dos números.
