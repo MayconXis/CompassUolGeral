@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.6 on win32)" generated="2025-08-29T12:39:10.813463" rpa="false" schemaversion="5">
+<suite id="s1" name="Api Usuarios Test" source="c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\tests\api_usuarios_test.robot">
+<test id="s1-t1" name="Cenario 29: PATCH Atualizar resource e ID invalido" line="206">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-08-29T12:39:10.888052" level="INFO">${payload} = {'job': 'inexistente'}</msg>
+<var>${payload}</var>
+<arg>job=inexistente</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-08-29T12:39:10.887756" elapsed="0.001406"/>
+</kw>
+<kw name="PATCH Endpoint /resource/id invalido" owner="api_usuarios">
+<kw name="Criar Sessão na reqres_api API" owner="api_usuarios">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-08-29T12:39:10.890345" level="INFO">${headers} = {'accept': 'application/json', 'Content-Type': 'application/json', 'x-api-key': 'reqres-free-v1'}</msg>
+<var>${headers}</var>
+<arg>accept=application/json</arg>
+<arg>Content-Type=application/json</arg>
+<arg>x-api-key=reqres-free-v1</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-08-29T12:39:10.890161" elapsed="0.000513"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-08-29T12:39:10.890998" level="INFO">Creating Session using : alias=reqres_api, url=https://reqres.in/api, headers={'accept': 'application/json', 'Content-Type': 'application/json', 'x-api-key': 'reqres-free-v1'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>alias=reqres_api</arg>
+<arg>url=https://reqres.in/api</arg>
+<arg>headers=${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-08-29T12:39:10.890807" elapsed="0.000372"/>
+</kw>
+<status status="PASS" start="2025-08-29T12:39:10.889950" elapsed="0.001295"/>
+</kw>
+<kw name="PATCH On Session" owner="RequestsLibrary">
+<msg time="2025-08-29T12:39:11.601353" level="INFO">PATCH Request : url=https://reqres.in/api/users/inexistente 
+ path_url=/api/users/inexistente 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'x-api-key': 'reqres-free-v1', 'Content-Length': '22'} 
+ body=b'{"job": "inexistente"}' 
+ </msg>
+<msg time="2025-08-29T12:39:11.601561" level="INFO">PATCH Response : url=https://reqres.in/api/users/inexistente 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 29 Aug 2025 15:40:19 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Etag': 'W/"3c-XFL0F3a5VwmxpJHa2mzHPX3JE4U"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '100', 'Ratelimit-Policy': '100;w=60', 'Ratelimit-Remaining': '98', 'Ratelimit-Reset': '60', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=%2BnNEXAASdch%2BDK%2FcTIanYznB05fKGGPkT4U8DPkvGaw%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1756482019"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=%2BnNEXAASdch%2BDK%2FcTIanYznB05fKGGPkT4U8DPkvGaw%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1756482019"', 'Vary': 'Origin', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Request-Id': '4458f099-1925-5799-f94c-d950a85efd7f', 'X-Xss-Protection': '1; mode=block', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '976d256d88f60aeb-BSB', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=79817&amp;min_rtt=79517&amp;rtt_var=30420&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2832&amp;recv_bytes=918&amp;delivery_rate=35154&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=5d224ca6f4cb2c0a&amp;ts=533&amp;x=0"'} 
+ body={"job":"inexistente","updatedAt":"2025-08-29T15:40:19.790Z"} 
+ </msg>
+<msg time="2025-08-29T12:39:11.601661" level="INFO">c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-08-29T12:39:11.601929" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>alias=reqres_api</arg>
+<arg>url=/users/${id}</arg>
+<arg>json=${payload}</arg>
+<doc>Sends a PATCH request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-08-29T12:39:10.891317" elapsed="0.710667"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-08-29T12:39:11.602071" elapsed="0.000085"/>
+</return>
+<msg time="2025-08-29T12:39:11.602272" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
+<var>${resposta}</var>
+<arg>resource=inexistente</arg>
+<arg>id=inexistente</arg>
+<arg>payload=${payload}</arg>
+<status status="PASS" start="2025-08-29T12:39:10.889564" elapsed="0.712753"/>
+</kw>
+<kw name="Validar Status Code" owner="api_usuarios">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${status_code_recebido} == ${status_code_esperado}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-08-29T12:39:11.603002" elapsed="0.000204"/>
+</kw>
+<arg>200</arg>
+<arg>${resposta.status_code}</arg>
+<status status="PASS" start="2025-08-29T12:39:11.602597" elapsed="0.000683"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Erro: Deveria retornar status code 400 para usuario invalido, porém resulta somente 200.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-08-29T12:39:11.603485" elapsed="0.000166"/>
+</kw>
+<tag>NEGATIVO</tag>
+<tag>PATCH</tag>
+<status status="PASS" start="2025-08-29T12:39:10.886980" elapsed="0.716924"/>
+</test>
+<doc>Keywords de teste para a API reqres.in</doc>
+<status status="PASS" start="2025-08-29T12:39:10.815639" elapsed="0.788873"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">NEGATIVO</stat>
+<stat pass="1" fail="0" skip="0">PATCH</stat>
+</tag>
+<suite>
+<stat name="Api Usuarios Test" id="s1" pass="1" fail="0" skip="0">Api Usuarios Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-08-29T12:39:10.828425" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 40: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.828826" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 61: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.829053" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 76: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.829352" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 86: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.829578" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 97: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.829724" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 109: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.829859" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 119: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.829999" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 138: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.830188" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 150: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.830319" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 157: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.830455" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 165: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.830621" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 173: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.830818" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 180: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.831060" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 188: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.831251" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 196: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.831399" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 205: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.831528" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 213: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.831828" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 222: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.831987" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 231: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.832181" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 240: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.832317" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 251: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.832445" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 261: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.832613" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 270: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.832788" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 280: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.832936" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 290: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.833064" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 303: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.833188" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 313: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.833313" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 324: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.833433" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 335: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.833548" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 344: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.833704" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 352: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.833830" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 361: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.833987" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 370: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-08-29T12:39:10.834123" level="WARN">Error in file 'c:\Users\md711\Documents\CompassUOL\CompassUolGeral\RobotFrameWork\API-ROBOT-FRAMEWORK\resources\api_usuarios.resource' on line 380: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
