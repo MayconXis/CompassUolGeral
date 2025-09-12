@@ -1,0 +1,142 @@
+{
+  "endpoints": {
+    "usuarios": {
+      "path": "/usuarios",
+      "criar": {
+        "metodo": "POST",
+        "payload": {
+          "nome": "Usuário Teste",
+          "email": "usuario@qa.com",
+          "password": "<senha_teste>",
+          "administrador": "false"
+        },
+        "status_esperado": 201
+      },
+      "criar_admin": {
+      "path": "/usuarios",
+        "metodo": "POST",
+        "payload": {
+          "nome": "Usuário Teste",
+          "email": "admin@qa.com",
+          "password": "<senha_teste>",
+          "administrador": "true"
+        },
+        "status_esperado": 201
+      },
+      "listar": {
+        "metodo": "GET",
+        "path": "/usuarios",
+        "status_esperado": 200
+      },
+      "buscar_por_id": {
+        "metodo": "GET",
+        "path": "/usuarios/{_id}",
+        "status_esperado_sucesso": 200,
+        "status_esperado_falha": 400
+      },
+      "atualizar": {
+        "metodo": "PUT",
+        "path": "/usuarios/{_id}",
+        "payload": {
+          "nome": "Nome Atualizado",
+          "email": "emailatualizado@qa.com",
+          "password": "<nova_senha>",
+          "administrador": "true"
+        },
+        "status_esperado": 200
+      },
+      "deletar": {
+        "metodo": "DELETE",
+        "path": "/usuarios/{_id}",
+        "status_esperado": 200
+      }
+    },
+    "login": {
+      "path": "/login",
+      "login_valido": {
+        "metodo": "POST",
+        "payload": {
+          "email": "maycon@teste.com",
+          "password": "<senha_teste>"
+        },
+        "status_esperado": 200
+      },
+      "login_invalido": {
+        "metodo": "POST",
+        "payload": {
+          "email": "emailerrado@qa.com",
+          "password": "senha_errada"
+        },
+        "status_esperado": 401
+      }
+    },
+    "produtos": {
+      "path": "/produtos",
+      "criar": {
+        "metodo": "POST",
+        "payload": {
+          "nome": "Produto Teste",
+          "preco": 50,
+          "descricao": "Descricao de um produto para teste.",
+          "quantidade": 20
+        },
+        "status_esperado": 201
+      },
+      "listar": {
+        "metodo": "GET",
+        "status_esperado": 200
+      },
+      "buscar_por_id": {
+        "metodo": "GET",
+        "path": "/produtos/{_id}",
+        "status_esperado_sucesso": 200,
+        "status_esperado_falha": 400
+      },
+      "atualizar": {
+        "metodo": "PUT",
+        "path": "/produtos/{_id}",
+        "payload": {
+          "nome": "Produto Atualizado",
+          "preco": 75,
+          "descricao": "Nova descricao.",
+          "quantidade": 15
+        },
+        "status_esperado": 200
+      },
+      "deletar": {
+        "metodo": "DELETE",
+        "path": "/produtos/{_id}",
+        "status_esperado": 200
+      }
+    },
+    "carrinhos": {
+      "path": "/carrinhos",
+      "criar": {
+        "metodo": "POST",
+        "payload": {
+          "produtos": [
+            {
+              "idProduto": "<id_do_produto>",
+              "quantidade": 1
+            }
+          ]
+        },
+        "status_esperado": 201
+      },
+      "listar": {
+        "metodo": "GET",
+        "status_esperado": 200
+      },
+      "concluir_compra": {
+        "metodo": "DELETE",
+        "path": "/carrinhos/concluir-compra",
+        "status_esperado": 200
+      },
+      "cancelar_compra": {
+        "metodo": "DELETE",
+        "path": "/carrinhos/cancelar-compra",
+        "status_esperado": 200
+      }
+    }
+  }
+}

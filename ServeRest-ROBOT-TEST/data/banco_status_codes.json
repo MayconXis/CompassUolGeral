@@ -1,0 +1,31 @@
+{
+  "status_codes_esperados": {
+    "POST": {
+      "criar_usuario": 201,
+      "criar_produto": 201,
+      "produto_duplicado": 400,
+      "login_valido": 200,
+      "login_invalido": 401,
+      "criar_carrinho": 201
+    },
+    "GET": {
+      "listar_usuarios": 200,
+      "listar_produtos": 200,
+      "listar_carrinhos": 200,
+      "usuario_valido": 200,
+      "produto_valido": 200,
+      "id_invalido": 400
+    },
+    "PUT": {
+      "atualizar_usuario": 200,
+      "atualizar_produto": 200,
+      "id_invalido": 400
+    },
+    "DELETE": {
+      "deletar_usuario": 200,
+      "deletar_produto": 200,
+      "cancelar_carrinho": 200,
+      "concluir_carrinho": 200
+    }
+  }
+}

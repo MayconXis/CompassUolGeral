@@ -1,0 +1,49 @@
+{
+  "usuarios_validos": [
+    {
+      "nome": "Usuario Teste Estatico 1",
+      "email": "usuario1@teste.com",
+      "password": "senha123",
+      "administrador": false
+    },
+    {
+      "nome": "Usuario Teste Estatico 2",
+      "email": "usuario2@teste.com", 
+      "password": "senha123",
+      "administrador": false
+    }
+  ],
+  "usuarios_admin": [
+    {
+      "nome": "Admin Teste Estatico 1",
+      "email": "admin1@teste.com",
+      "password": "senha123",
+      "administrador": true
+    },
+    {
+      "nome": "Admin Teste Estatico 2",
+      "email": "admin2@teste.com",
+      "password": "senha123", 
+      "administrador": true
+    }
+  ],
+  "usuarios_login": [
+    {
+      "email": "fulano@qa.com",
+      "password": "teste"
+    },
+    {
+      "email": "usuario.inexistente@teste.com",
+      "password": "senha_incorreta"
+    }
+  ],
+  "ids_validos": [
+    "0uxuPY0cbmQhpEz1",
+    "BeeJh5lz3k6kSIzA"
+  ],
+  "ids_invalidos": [
+    "999999999999999999999999",
+    "id_invalido_123",
+    "abc123"
+  ]
+}
